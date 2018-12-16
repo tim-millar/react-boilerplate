@@ -8,19 +8,22 @@ class App extends React.Component {
     count: 0
   }
 
+  increment = () => {
+    this.setState(state => ({ count: state.count + 1 }))
+  }
+
+  decrement = () => {
+    this.setState(state => ({ count: state.count - 1 }))
+  }
+
   render() {
     const { count } = this.state
     return (
       <div>
         <h1>Hello, World!</h1>
-        <img src="./logo.png" alt="company logo" />
         <h2 className={count > 10 ? 'warning' : null}>Count: {count}</h2>
-        <button onClick={() => this.setState(() => ({ count: count + 1 }))}>
-          +
-        </button>
-        <button onClick={() => this.setState(() => ({ count: count - 1 }))}>
-          -
-        </button>
+        <button onClick={this.increment}>+</button>
+        <button onClick={this.decrement}>-</button>
         {count > 10 ? (
           <React.Suspense fallback={null}>
             <Warning />
