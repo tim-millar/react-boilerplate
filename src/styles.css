@@ -4,7 +4,9 @@ html {
   font-family: sans-serif;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -22,15 +24,12 @@ ul {
   padding: 0;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
 img {
   max-width: 100%;
   height: auto;
-}
-
-.warning {
-  color: tomato;
 }
