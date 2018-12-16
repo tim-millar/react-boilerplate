@@ -1,13 +1,13 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import propTypes from 'prop-types'
 
 export default class DefaultErrorBoundary extends React.Component {
-  propTypes = {
-    children: PropTypes.node
-  }
-
   state = {
     isError: false
+  }
+
+  static propTypes = {
+    children: propTypes.node.isRequired
   }
 
   static getDerivedStateFromError() {
