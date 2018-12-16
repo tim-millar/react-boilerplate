@@ -13,11 +13,12 @@ class App extends React.Component {
     return (
       <div>
         <h1>Hello, World!</h1>
+        <img src="./logo.png" alt="company logo" />
         <h2 className={count > 10 ? 'warning' : null}>Count: {count}</h2>
-        <button onClick={() => this.setState(state => ({ count: count + 1 }))}>
+        <button onClick={() => this.setState(() => ({ count: count + 1 }))}>
           +
         </button>
-        <button onClick={() => this.setState(state => ({ count: count - 1 }))}>
+        <button onClick={() => this.setState(() => ({ count: count - 1 }))}>
           -
         </button>
         {count > 10 ? (
